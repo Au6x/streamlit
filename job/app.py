@@ -1,10 +1,10 @@
 import streamlit as st
 import pathlib 
-STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'job'
+STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / './streamlit'
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
+local_css("style.css")
 
 
 # Add a title to the app
@@ -234,15 +234,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-
-
-st.markdown("""
-<style>
-    #MainMenu {visibility:hidden;}
-footer {visibility:hidden;}
-header {visibility:hidden;}
-</style>
-""", unsafe_allow_html=True)
 
 
 
