@@ -1,4 +1,5 @@
 import streamlit as st
+python -m pip install --upgrade pip
 
 def local_css(file_name):
     with open(file_name) as f:
