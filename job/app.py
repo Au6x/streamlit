@@ -1,10 +1,10 @@
 import streamlit as st
-
+STREAMLIT_STATIC_PATH = pathlib.Path(st.__path__[0]) / 'style.css'
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.beta_css("style.css")
+("style.css")
 
 # Add a title to the app
 st.title("Sales Analysis")
